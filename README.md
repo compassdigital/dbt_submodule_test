@@ -1,1 +1,1 @@
-# dbt_submodule_test
+# dbt_boilerplate

@@ -1,0 +1,66 @@
+dbt_submodules_test:
+  outputs:
+    target: "{{ env_var('DBT_TARGET') }}"
+    prod:
+      type: redshift
+      dbname: "{{ env_var('DBT_DB_NAME') }}"
+      host: "{{ env_var('DBT_HOST') }}"
+      user: "{{ env_var('DBT_USER') }}"
+      password: "{{ env_var('DBT_ENV_SECRET_PASSWORD') }}"
+      port: "{{ env_var('DBT_PORT') | as_number }}"
+      schema: "dbt_{{ env_var('DBT_ENVIRONMENT') }}"
+      threads: 1
+      keepalives_idle: 30
+    dev:
+      type: redshift
+      dbname: "{{ env_var('DBT_DB_NAME') }}"
+      host: "{{ env_var('DBT_HOST') }}"
+      user: "{{ env_var('DBT_USER') }}"
+      password: "{{ env_var('DBT_ENV_SECRET_PASSWORD') }}"
+      port: "{{ env_var('DBT_PORT') | as_number }}"
+      schema: "dbt_{{ env_var('DBT_ENVIRONMENT') }}"
+      threads: 1
+      keepalives_idle: 30
+    local_dev:
+      type: redshift
+      dbname: "{{ env_var('DBT_DB_NAME') }}"
+      host: "{{ env_var('DBT_HOST') }}"
+      user: "{{ env_var('DBT_USER') }}"
+      password: "{{ env_var('DBT_ENV_SECRET_PASSWORD') }}"
+      port: "{{ env_var('DBT_PORT') | as_number }}"
+      schema: "dbt_{{ env_var('DBT_ENVIRONMENT') }}"
+      threads: 1
+      keepalives_idle: 30
+elementary:
+  outputs:
+    target: "{{ env_var('DBT_TARGET') }}"
+    prod:
+      type: redshift
+      dbname: "{{ env_var('DBT_DB_NAME') }}"
+      host: "{{ env_var('DBT_HOST') }}"
+      user: "{{ env_var('DBT_USER') }}"
+      password: "{{ env_var('DBT_ENV_SECRET_PASSWORD') }}"
+      port: "{{ env_var('DBT_PORT') | as_number }}"
+      schema: "dbt_{{ env_var('DBT_ENVIRONMENT') }}"
+      threads: 1
+      keepalives_idle: 30
+    dev:
+      type: redshift
+      dbname: "{{ env_var('DBT_DB_NAME') }}"
+      host: "{{ env_var('DBT_HOST') }}"
+      user: "{{ env_var('DBT_USER') }}"
+      password: "{{ env_var('DBT_ENV_SECRET_PASSWORD') }}"
+      port: "{{ env_var('DBT_PORT') | as_number }}"
+      schema: "dbt_{{ env_var('DBT_ENVIRONMENT') }}"
+      threads: 1
+      keepalives_idle: 30
+    local_dev:
+      type: redshift
+      dbname: "{{ env_var('DBT_DB_NAME') }}"
+      host: "{{ env_var('DBT_HOST') }}"
+      user: "{{ env_var('DBT_USER') }}"
+      password: "{{ env_var('DBT_ENV_SECRET_PASSWORD') }}"
+      port: "{{ env_var('DBT_PORT') | as_number }}"
+      schema: "dbt_{{ env_var('DBT_ENVIRONMENT') }}"
+      threads: 1
+      keepalives_idle: 30
