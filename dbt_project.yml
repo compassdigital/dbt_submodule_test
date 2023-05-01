@@ -1,5 +1,5 @@
 config-version: 2
-version: "1.4.6"
+version: "1.5.0"
 
 name: "dbt_submodules_test"
 profile: "dbt_submodules_test"
